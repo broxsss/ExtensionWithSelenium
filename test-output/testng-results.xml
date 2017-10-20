@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="30739" started-at="2017-10-20T23:06:45Z" finished-at="2017-10-20T23:07:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="30739" started-at="2017-10-20T23:06:45Z" finished-at="2017-10-20T23:07:16Z">
+      <class name="whatfix.wikipedia.ChromeBrowser_TC001">
+        <test-method status="PASS" signature="AutomateSeelive()" name="AutomateSeelive" duration-ms="30356" started-at="2017-10-20T23:06:45Z" finished-at="2017-10-20T23:07:15Z">
+        </test-method>
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult)" name="teardown" is-config="true" duration-ms="366" started-at="2017-10-20T23:07:15Z" finished-at="2017-10-20T23:07:16Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult: AutomateSeelive STATUS:SUCCESS METHOD:whatfix.wikipedia.ChromeBrowser_TC001.AutomateSeelive()]
+]]>
+              </value>
+            </param>
+          </params>
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
