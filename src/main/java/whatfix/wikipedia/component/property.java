@@ -16,7 +16,7 @@ public class property {
 	public void loaddata() throws IOException
 	{
 		prop = new Properties();
-		File file = new File(System.getProperty("user.dir")+"\\src\\main\\java\\whatfix\\wikipedia\\resources\\resources.properties");
+		File file = new File(System.getProperty("user.dir")+"//src//main//java//whatfix//wikipedia//resources//resources.properties");
 		FileReader fr = new FileReader(file);
 		prop.load(fr);			
 	}
@@ -29,25 +29,26 @@ public class property {
 		
 	}
 	
-	 public String getscreenshot(WebDriver driver,String Testcasename) 
-     {
-             File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-          
-             try {
-            	   
-            	 FileUtils.copyFile(scrFile, new File(System.getProperty("user.dir")+"\\screenshots\\"+Testcasename+"_"+System.currentTimeMillis()+".png"));
-            	       }
-            	 
-            	catch (IOException e)
-            	 
-            	{
-            	 
-            	System.out.println(e.getMessage());
-            	 
-            	    }
-             
-         return  System.getProperty("user.dir")+"\\screenshots\\"+Testcasename+"_"+System.currentTimeMillis()+".png";   
-     }
+	public String getscreenshot(WebDriver driver,String Testcasename) throws IOException 
+    {
+            
+		 File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		 File DestFile= new File(System.getProperty("user.dir")+"//screenshots//"+Testcasename+"_"+System.currentTimeMillis()+".png"); 
+            try {
+           	   
+           	 FileUtils.copyFile(scrFile, DestFile);
+           	      }
+           	 
+           	catch (IOException e)
+           	 
+           	{
+           	 
+           	System.out.println(e.getMessage());
+           	 
+           	    }
+            
+        return  System.getProperty("user.dir")+"\\screenshots\\"+Testcasename+"_"+System.currentTimeMillis()+".png";   
+    }
 
 	
 	

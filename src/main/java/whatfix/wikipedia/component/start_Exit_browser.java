@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,7 +22,7 @@ public class start_Exit_browser {
 	
 	public WebDriver chromebrowser(WebDriver driver)
 	{
-		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//driver//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","/Users/akshaykumarsaini/Desktop/chromedriver");
 		 Map<String, Object> prefs = new HashMap<String, Object>();
 		 prefs.put("profile.default_content_setting_values.notifications", 2); 
 		 ChromeOptions options = new ChromeOptions();
@@ -39,8 +40,8 @@ public class start_Exit_browser {
 	
 	public WebDriver firefoxbrowser(WebDriver driver)
 	{
-		 System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+"//driver//geckodriver.exe");
-         String firebugFilePath = System.getProperty("user.dir")+"\\driver\\jid1-RMaoH9zYsFXFcg@jetpack.xpi";
+		System.setProperty("webdriver.gecko.driver","/Users/akshaykumarsaini/Desktop/geckodriver");
+         String firebugFilePath = System.getProperty("user.dir")+"//driver//jid1-RMaoH9zYsFXFcg@jetpack.xpi";
          FirefoxProfile profile = new FirefoxProfile();
          profile.addExtension(new File(firebugFilePath));
          driver = new FirefoxDriver(profile);
